@@ -213,6 +213,11 @@ pinInput.addEventListener('keydown', function(e) {
     }
 });
 
+pinDigits.addEventListener('click', function(e) {
+    e.preventDefault();
+    pinInput.focus();
+});
+
 pinLockBtn.addEventListener('click', function(e) {
     e.preventDefault();
     pinInput.focus();
