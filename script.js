@@ -68,7 +68,7 @@ function renderGallery() {
         });
     }
 }
-renderGallery();
+    try { renderGallery(); } catch (e) { console.error('renderGallery', e); }
 
 // ============================================================
 //  FLOATERS GALERI
@@ -88,7 +88,7 @@ function createFloaters() {
         galleryFloaters.appendChild(el);
     }
 }
-createFloaters();
+    try { createFloaters(); } catch (e) { console.error('createFloaters', e); }
 
 // ============================================================
 //  PIN LOVE ENTRANCE ANIMATION
@@ -121,7 +121,7 @@ function createPinLoveEntrance() {
         }
     }, 2500);
 }
-createPinLoveEntrance();
+    try { createPinLoveEntrance(); } catch (e) { console.error('createPinLoveEntrance', e); }
 
 // ============================================================
 //  SCREEN HELPER
