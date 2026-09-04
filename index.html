@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>🎂 Happy Birthday Sayang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ===== PIN / LOGIN ===== -->
+    <div class="screen active" id="pinScreen">
+        <div class="pin-romantic-bg">
+            <div class="romantic-orb orb-1"></div>
+            <div class="romantic-orb orb-2"></div>
+            <div class="romantic-orb orb-3"></div>
+            <div class="romantic-orb orb-4"></div>
+        </div>
+        <div class="pin-love-entrance" id="pinLoveEntrance"></div>
+        <div class="pin-box">
+            <div class="pin-digits" id="pinDigits">
+                <div class="pin-digit" data-i="0"></div>
+                <div class="pin-digit" data-i="1"></div>
+                <div class="pin-digit" data-i="2"></div>
+                <div class="pin-digit" data-i="3"></div>
+                <div class="pin-digit" data-i="4"></div>
+                <div class="pin-digit" data-i="5"></div>
+            </div>
+            <h2>Untuk Sayangku</h2>
+            <p class="sub">Masukkan tanggal lahirmu</p>
+            <input type="text" id="pinInput" class="pin-hidden-input" maxlength="6" autocomplete="off" inputmode="numeric" />
+            <button class="pin-lock-btn" id="pinLockBtn">🔑</button>
+            <button class="pin-btn" id="pinBtn">✨ Buka</button>
+            <div class="pin-error" id="pinError">💔 PIN salah, coba lagi ya sayang!</div>
+        </div>
+    </div>
+
+    <!-- ===== GIFT BOX ===== -->
+    <div class="screen hidden" id="giftScreen">
+        <div class="gift-container">
+            <div class="gift-box" id="giftBox">
+                <div class="lid"></div>
+                <div class="box-body"><div class="shine"></div></div>
+            </div>
+            <div class="gift-label" id="giftLabel">💝 Kado untukmu</div>
+        </div>
+    </div>
+
+    <!-- ===== BIRTHDAY ===== -->
+    <div class="screen hidden" id="birthdayScreen">
+        <div class="birthday-content">
+            <div class="greeting">Happy Birthday</div>
+            <div class="for-name">untuk Sayangku 💕</div>
+            <div class="message">
+                Semoga hari ini menjadi awal dari kebahagiaan yang tak pernah usai.<br />
+                Terima kasih telah menjadi bagian terindah dalam hidupku.<br /><br />
+                <span class="heart">❤️</span> I love you more than words can say.
+            </div>
+            <button class="btn-continue" id="btnContinue">💫 Lanjut ke surat</button>
+        </div>
+    </div>
+
+    <!-- ===== SURAT + GALERI ===== -->
+    <div class="screen hidden" id="finalScreen">
+        <div class="screen-inner">
+            <h2 class="final-title">💌 Ada Surat untukmu</h2>
+            <p class="envelope-hint" id="envelopeHint">👆 Klik amplop untuk membuka</p>
+
+            <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                </div>
+            </div>
+
+            <div class="card-container" id="cardContainer">
+                <div class="card-outside" id="cardOutside">
+                    <div class="card-hearts-deco" id="cardHeartsDeco"></div>
+                    <div class="card-title">💖 Untuk Sayangku</div>
+                    <div class="card-msg">
+                        Selamat ulang tahun, cinta! 🎂<br /><br />
+                        Hari ini adalah hari istimewa karena di hari ini<br />
+                        dunia menerima hadiah terindahnya — kamu. 💫<br /><br />
+                        Setiap hari bersamamu adalah petualangan yang indah.<br />
+                        Terima kasih sudah menjadi rumah bagi hatiku. 🏡<br /><br />
+                        Semua mimpi-mimpimu akan menjadi nyata, dan<br />
+                        aku akan selalu ada di sampingmu.<br /><br />
+                        <span class="heart">❤️</span> Aku mencintaimu selamanya. <span class="heart">❤️</span>
+                    </div>
+                    <div class="card-sign">— Dari aku, untuk selamanya</div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn btn-back" id="btnBack">⬅ Kembali</button>
+                <button class="btn-lihat-foto" id="btnLihatFoto">📷 Lihat Foto Kita</button>
+            </div>
+
+            <div class="flower-mini-counter">🌹 Bunga mekar: <span id="flowerCountFinal">0</span></div>
+        </div>
+    </div>
+
+    <!-- ===== GALERI OVERLAY ===== -->
+    <div class="gallery-overlay" id="galleryOverlay">
+        <div class="gallery-slider">
+            <div class="gallery-track" id="galleryTrack"></div>
+            <div class="gallery-floaters" id="galleryFloaters"></div>
+        </div>
+        <button class="btn-close-gallery" id="btnCloseGallery">✕ Tutup</button>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
